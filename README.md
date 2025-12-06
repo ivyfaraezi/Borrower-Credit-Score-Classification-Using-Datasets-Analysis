@@ -163,9 +163,9 @@ Borrower-Credit-Score-Classification-Using-Datasets-Analysis/
 
 ### Developed By
 
-- **tuRjoX** - [GitHub Profile](https://github.com/tuRjoX)
-- **ivyfaraezi** - [GitHub Profile](https://github.com/ivyfaraezi)
-- **syma** - [GitHub Profile]()
+- **Turjo Das Dip** - [GitHub Profile](https://github.com/tuRjoX)
+- **Nusrat Faraezi Ivy** - [GitHub Profile](https://github.com/ivyfaraezi)
+- **Saima Ahmed Tanjila** - [GitHub Profile](https://github.com/Saima2309)
 
 ### Contributors
 
