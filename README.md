@@ -18,14 +18,33 @@
 
 ## 📖 Project Description
 
-This project focuses on **credit score classification** for borrowers using comprehensive data analysis and machine learning techniques. The system analyzes various financial and demographic factors to predict borrower creditworthiness, which is crucial for financial institutions to make informed lending decisions.
+This project focuses on **credit score analysis** for borrowers using comprehensive data analysis and machine learning techniques. The system analyzes various financial and demographic factors to predict borrower creditworthiness, which is crucial for financial institutions to make informed lending decisions.
 
-The project implements:
+The project implements **three complete analytical approaches**:
+
+1. **Classification Analysis** (`H-G01-final-classification.R`)
+
+   - Decision Tree classification models
+   - Credit score category prediction
+   - Model performance evaluation and comparison
+
+2. **Clustering Analysis** (`H-G01-final-clustering.R`)
+
+   - K-means and hierarchical clustering
+   - Customer segmentation based on credit behavior
+   - Optimal cluster determination
+
+3. **Regression Analysis** (`H-G01-final-regression .R`)
+   - Linear and non-linear regression models
+   - Credit score prediction as continuous variable
+   - Feature importance and relationship analysis
+
+**Core Features**:
 
 - **Data preprocessing and cleaning** of borrower information
-- **Exploratory Data Analysis (EDA)** with visualizations
+- **Exploratory Data Analysis (EDA)** with comprehensive visualizations
 - **Feature engineering** and correlation analysis
-- **Machine learning models** including SVM
+- **Multiple machine learning approaches** (classification, clustering, regression)
 - **Model evaluation** using cross-validation and performance metrics
 - **Statistical analysis** to identify key factors affecting credit scores
 
@@ -33,13 +52,18 @@ This tool can help financial institutions automate credit assessment, reduce ris
 
 ## ✨ Features
 
-- 📊 **Comprehensive Data Analysis**: Statistical analysis of borrower data
+- 📊 **Comprehensive Data Analysis**: Statistical analysis of borrower data across multiple analytical frameworks
 - 🔍 **Feature Correlation**: Identify relationships between variables
-- 🤖 **Multiple ML Models**: SVM and other classification algorithms
-- 📈 **Visualization Suite**: Interactive plots and charts using ggplot2
+- 🤖 **Multiple ML Approaches**:
+  - Classification models (Decision Trees)
+  - Clustering algorithms (K-means, PCA)
+  - Regression models (Linear Regrssion)
+- 📈 **Visualization Suite**: Interactive plots and charts using ggplot2, factoextra
 - ⚡ **Parallel Processing**: Efficient computation using future and future.apply
-- 🎯 **Model Evaluation**: Cross-validation and performance metrics
+- 🎯 **Model Evaluation**: Cross-validation and comprehensive performance metrics
 - 📉 **Information Theory Metrics**: Mutual information and entropy analysis
+- 🎨 **Clustering Visualization**: Dendrograms, elbow plots, and silhouette analysis
+- 🌳 **Decision Tree Visualization**: Interactive tree plots with rpart.plot
 
 ## 🚀 How to Install and Run the Project
 
@@ -59,19 +83,16 @@ This tool can help financial institutions automate credit assessment, reduce ris
 
 2. **Install required R packages**
 
-   Open R or RStudio and run the script. The required packages will be automatically installed:
+   Open R or RStudio and run any of the scripts. The required packages will be automatically installed:
 
-   - dplyr
-   - ggplot2
-   - reshape2
-   - GGally
-   - e1071
-   - readr
-   - corrplot
-   - caret
-   - infotheo
-   - future
-   - future.apply
+   **Common packages** (all scripts):
+
+   - dplyr, ggplot2, reshape2, GGally, e1071, readr
+   - corrplot, caret, infotheo, rpart, rpart.plot
+
+   **Additional packages**:
+
+   - `H-G01-final-clustering.R`: cluster, factoextra
 
 3. **Verify data file**
 
@@ -79,72 +100,125 @@ This tool can help financial institutions automate credit assessment, reduce ris
 
 ### Running the Project
 
-**Option 1: Using RStudio**
+**Choose the appropriate script based on your analysis goal:**
 
-1. Open `H-G01-mid-project.R` in RStudio
-2. Click "Source" or press `Ctrl+Shift+S` to run the entire script
-3. Or run sections interactively by selecting code and pressing `Ctrl+Enter`
+**1. Classification Analysis** (`H-G01-final-classification.R`)
 
-**Option 2: Using R Console**
+```r
+source("H-G01-final-classification.R")
+```
+
+Use this for predicting credit score categories using Decision Trees.
+
+**2. Clustering Analysis** (`H-G01-final-clustering.R`)
+
+```r
+source("H-G01-final-clustering.R")
+```
+
+Use this for customer segmentation and identifying borrower groups.
+
+**3. Regression Analysis** (`H-G01-final-regression .R`)
+
+```r
+source("H-G01-final-regression .R")
+```
+
+Use this for predicting credit scores as continuous values.
+
+**4. Mid-Project Analysis** (`H-G01-mid-project.R`)
 
 ```r
 source("H-G01-mid-project.R")
 ```
 
-**Option 3: Using Command Line**
+Use this for the initial exploratory analysis.
+
+**Using RStudio:**
+
+1. Open any script in RStudio
+2. Click "Source" or press `Ctrl+Shift+S` to run the entire script
+3. Or run sections interactively by selecting code and pressing `Ctrl+Enter`
+
+**Using Command Line:**
 
 ```bash
-Rscript H-G01-mid-project.R
+Rscript H-G01-final-classification.R
+# or
+Rscript H-G01-final-clustering.R
+# or
+Rscript "H-G01-final-regression .R"
 ```
 
 ## 💡 How to Use the Project
 
 ### Basic Usage
 
-1. **Load the script**: Open `H-G01-mid-project.R` in your R environment
+1. **Select your analysis type**: Choose from Classification, Clustering, or Regression based on your objective
 
-2. **Data Understanding**: The script automatically loads and explores the dataset
+2. **Load the script**: Open the corresponding R file in your R environment
 
-   - View summary statistics
-   - Check data structure and types
-   - Identify missing values
+3. **Data Understanding**: Each script automatically:
 
-3. **Exploratory Data Analysis**:
+   - Loads the dataset from Google Drive
+   - Displays summary statistics
+   - Shows data structure and types
+   - Identifies missing values
 
-   - Run the EDA section to generate visualizations
-   - Analyze correlations between features
-   - Identify patterns and outliers
+4. **Exploratory Data Analysis**:
 
-4. **Model Training**:
+   - Generates visualizations automatically
+   - Analyzes correlations between features
+   - Identifies patterns and outliers
 
-   - The script trains multiple classification models
-   - Models are evaluated using cross-validation
-   - Performance metrics are displayed
+5. **Model Training & Analysis**:
 
-5. **Results Interpretation**:
-   - Review model accuracy and performance metrics
+   **Classification Script:**
+
+   - Trains SVM and Decision Tree models
+   - Evaluates using confusion matrices and accuracy metrics
+   - Compares model performance
+
+   **Clustering Script:**
+
+   - Performs K-means and hierarchical clustering
+   - Determines optimal number of clusters
+   - Visualizes clusters and dendrograms
+
+   **Regression Script:**
+
+   - Builds linear and non-linear regression models
+   - Evaluates using RMSE, R-squared, and MAE
+   - Analyzes residuals and model fit
+
+6. **Results Interpretation**:
+   - Review model performance metrics
    - Analyze feature importance
-   - Examine confusion matrices
+   - Examine visualizations and diagnostic plots
 
 ### Example Output
 
-The script generates:
+The scripts generate:
 
 - Statistical summaries of borrower data
 - Correlation matrices and heatmaps
 - Feature importance plots
 - Model performance metrics
-- Classification results
+- **Classification**: Confusion matrices, ROC curves, accuracy scores
+- **Clustering**: Dendrograms, elbow plots, silhouette analysis, cluster profiles
+- **Regression**: Scatter plots, residual plots, prediction accuracy metrics
 
 ## 📁 Project Structure
 
 ```
 Borrower-Credit-Score-Classification-Using-Datasets-Analysis/
 │
-├── H-G01-mid-project.R          # Main R script with analysis and models
-├── bank_modified.csv            # Dataset (borrower information)
-├── H-G01-mid-report.pdf/.docx   # Project documentation
-└── LICENSE                      # Apache 2.0 License
+├── H-G01-mid-project.R              # Initial exploratory analysis and models
+├── H-G01-final-classification.R     # Classification models (SVM, Decision Trees)
+├── H-G01-final-clustering.R         # Clustering analysis (K-means, Hierarchical)
+├── H-G01-final-regression .R        # Regression models (Linear, Non-linear)
+├── bank_modified.csv                # Dataset (borrower information)
+└── LICENSE                          # Apache 2.0 License
 ```
 
 ## 🛠️ Technologies Used
@@ -157,7 +231,10 @@ Borrower-Credit-Score-Classification-Using-Datasets-Analysis/
 - **corrplot**: Correlation visualization
 - **GGally**: Advanced plotting functions
 - **infotheo**: Information theory metrics
-- **future/future.apply**: Parallel processing
+- **rpart/rpart.plot**: Decision tree modeling and visualization
+- **cluster**: Clustering algorithms
+- **factoextra**: Clustering visualization and analysis
+- **future/future.apply**: Parallel processing (mid-project)
 
 ## 👥 Credits
 
