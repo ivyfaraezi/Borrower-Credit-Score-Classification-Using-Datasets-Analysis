@@ -30,7 +30,7 @@ for (p in packages) {
 
 # Load dataset directly from Google Drive using readr
 # read_csv automatically detects column types
-url <- "https://drive.google.com/uc?export=download&id=153djv5IlB2WeDoeMLYT9vujlPUyGuf7S" 
+url <- "https://raw.githubusercontent.com/tuRjoX/Comprehensive-Borrower-Credit-Score-Analysis/refs/heads/main/bank_modified.csv" 
 data <- read_csv(url) 
 head(data)
 
